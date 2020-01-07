@@ -8,7 +8,37 @@ output:
     theme: united
 ---
 
+
+
+## Variables
+
+* **Post_QoL**:	This	is	a	measure	of	quality	of	life	after	the	cosmetic	surgery.
+This	is	our	outcome	variable.
+* **Base_QoL**:	 We	 need	 to	 adjust	 our	 outcome	 for	 quality	 of	 life	 before	 the
+surgery.
+* **Surgery**:	 This	 variable	 is	 a	 dummy	 variable	 that	 specifies	 whether	 the
+person	 has	 undergone	 cosmetic	 surgery	 (1)	 or	 whether	 they	 are	 on	 the
+waiting	list	(0),	which	acts	as	our	control	group.
+* **Surgery_Text**:	 This	 variable	 is	 the	 same	 as	 above	 but	 specifies	 group
+membership	as	text	(we	will	use	this	variable	when	we	create	graphs	but
+not	for	the	main	analysis).
+* **Clinic**:	This	variable	specifies	which	of	10	clinics	the	person	attended	to
+have	their	surgery.
+* **Age**:	This	variable	tells	us	the	person’s	age	in	years.
+* **BDI**:	 It	 is	 becoming	 increasingly	 apparent	 that	 people	 volunteering	 for
+cosmetic	surgery	(especially	when	the	surgery	is	purely	for	vanity)	might
+have	 very	 different	 personality	 profiles	 than	 the	 general	 public	 (Cook,
+Rossera,	Toone,	James,	&	Salmon,	2006).	In	particular,	these	people	might
+have	low	self-esteem	or	be	depressed.	When	looking	at	quality	of	life	it	is
+important	to	assess	natural	levels	of	depression,	and	this	variable	used	the
+Beck	Depression	Inventory	(BDI)	to	do	just	that.
+* **Reason**:	This	dummy	variable	specifies	whether	the	person	had/is	waiting
+to	 have	 surgery	 purely	 to	 change	 their	 appearance	 (0),	 or	 because	 of	 a
+physical	reason	(1).
+
+## Import data
 ```{r}
-plot(cars)
+data <- read.table("Cosmetic Surgery.dat", sep = "\t", header = TRUE)
+head(data)
 ```
 
